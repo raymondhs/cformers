@@ -136,6 +136,9 @@ MAP_MODEL_TO_URL = { # Replace "/" with "-.-" in the model name
     'OpenAssistant/oasst-sft-1-pythia-12b': ModelUrlMap(
         cpp_model_name="gptneox",
         int4_fixed_zero="https://huggingface.co/ayushk4/OpenAssistant-.-oasst-sft-1-pythia-12b/resolve/main/int4_fixed_zero.bin"),
+    'databricks/dolly-v2-12b': ModelUrlMap(
+        cpp_model_name="gptneox",
+        int4_fixed_zero="https://huggingface.co/snphs/dolly-v2-12b-q4/resolve/main/int4_fixed_zero.bin"),
 }
 
 class AutoInference:

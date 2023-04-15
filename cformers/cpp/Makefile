@@ -66,7 +66,9 @@ endif
 #       feel free to update the Makefile for your architecture and send a pull request or issue
 ifeq ($(UNAME_M),$(filter $(UNAME_M),x86_64 i686))
 	ifeq ($(UNAME_S),Darwin)
-		CFLAGS += -mf16c
+		ifneq ($(SYSCTL_M),1)
+			CFLAGS += -mf16c
+		endif
 		AVX1_M := $(shell sysctl machdep.cpu.features)
 		ifneq (,$(findstring FMA,$(AVX1_M)))
 			CFLAGS += -mfma
