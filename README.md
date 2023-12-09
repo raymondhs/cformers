@@ -27,7 +27,7 @@ And most importantly:
 Setup
 ```bash
 pip install transformers wget
-git clone https://github.com/nolanoOrg/cformers.git
+git clone https://github.com/raymondhs/cformers.git
 cd cformers/cformers/cpp && make && cd ..
 ```
 
